@@ -1,83 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title style="color: #fff;">Niclas Jeppsson - Indie Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niclas Jeppsson — Indie Developer</title>
     <style>
-      /* Add some basic styles for the page */
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --surface-alt: #273449;
+        --border: #334155;
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent-hover: #0ea5e9;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
-        font-family: sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(to bottom right, #9b59b6, #e91e63);
-        color: #000;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
       }
-      h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin: 1rem 0;
+
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
+      }
+
+      header {
         text-align: center;
+        padding: 2rem 0 3rem;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 3rem;
       }
-      h2 {
-        font-size: 2rem;
-        font-weight: bold;
-        margin: 1rem 0;
+
+      header h1 {
+        font-size: 2.25rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.02em;
       }
-      h4 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin: 0.5rem 0;
+
+      header .tagline {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        margin: 0;
       }
-      p {
+
+      section > h2 {
         font-size: 1rem;
-        margin: 0.5rem 0;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin: 0 0 1.5rem;
       }
-      /* Style the main section */
-      main {
-        padding: 2rem;
-        background-color: #fff;
-        border-radius: 1rem;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-      }
-      /* Style the articles */
+
       article {
-        margin-bottom: 2rem;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        transition: border-color 0.2s ease, transform 0.2s ease;
       }
+
+      article:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+      }
+
       article:last-child {
         margin-bottom: 0;
       }
-      /* Style the footer */
+
+      article h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 0 1rem;
+        letter-spacing: -0.01em;
+      }
+
+      article h4 {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        margin: 1.25rem 0 0.5rem;
+      }
+
+      article p {
+        color: var(--text-muted);
+        margin: 0 0 1rem;
+      }
+
+      .app-link {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 0.65rem 1.25rem;
+        background: var(--accent);
+        color: var(--bg);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background 0.2s ease;
+      }
+
+      .app-link:hover {
+        background: var(--accent-hover);
+      }
+
       footer {
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 2rem 1rem;
+        }
+        header h1 {
+          font-size: 1.75rem;
+        }
+        article {
+          padding: 1.5rem;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Niclas Jeppsson - Indie Developer</h1>
-    </header>
-    <main>
-      <section>
-        <h1>Apps Info</h1>
-        <article>
-          <h2>Football Analytics</h2>
-          <h4>Privacy Policy</h4>
-          <p>Football Analytics doesn't log or share your personal information. We don't track you. We don't profile you.</p>
-          <h3>Available on the App Store:</h3>
-          <a href="https://apps.apple.com/gb/app/football-analytics/id1672013524">Football Analytics</a>
-        </article>
-        <article>
-          <h2>DiskDevPro</h2>
-          <h4>Privacy Policy</h4>
-          <p>DiskDevPro doesn't log or share your personal information. We don't track you. We don't profile you.</p>
-           <h3>Available on the Mac App Store:</h3>
-          <a href="https://apps.apple.com/gb/app/diskdevpro/id6447977360?mt=12">DiskDevPro</a>
-        </article>
-      </section>
-    </main>
-    <footer>
-      <p>For Support: niclasjeppsson@gmail.com</p>
-    </footer>
+    <div class="container">
+      <header>
+        <h1>Niclas Jeppsson</h1>
+        <p class="tagline">Indie Developer</p>
+      </header>
+
+      <main>
+        <section>
+          <h2>Apps</h2>
+
+          <article>
+            <h3>Linear Algebra Visualizer</h3>
+            <h4>Privacy Policy</h4>
+            <p>Linear Algebra Visualizer doesn't log or share your personal information. We don't track you. We don't profile you.</p>
+          </article>
+
+          <article>
+            <h3>DiskDevPro</h3>
+            <h4>Privacy Policy</h4>
+            <p>DiskDevPro doesn't log or share your personal information. We don't track you. We don't profile you.</p>
+            <a class="app-link" href="https://apps.apple.com/gb/app/diskdevpro/id6447977360?mt=12">View on Mac App Store</a>
+          </article>
+        </section>
+      </main>
+
+      <footer>
+        <p>For support, contact <a href="mailto:niclasjeppsson@gmail.com">niclasjeppsson@gmail.com</a></p>
+      </footer>
+    </div>
   </body>
 </html>
