@@ -47,6 +47,16 @@
         margin-bottom: 3rem;
       }
 
+      header .avatar {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--border);
+        margin: 0 auto 1.25rem;
+        display: block;
+      }
+
       header h1 {
         font-size: 2.25rem;
         font-weight: 700;
@@ -159,6 +169,7 @@
   <body>
     <div class="container">
       <header>
+        <img class="avatar" src="profile.png" alt="Niclas Jeppsson">
         <h1>Niclas Jeppsson</h1>
         <p class="tagline">Indie Developer</p>
       </header>
